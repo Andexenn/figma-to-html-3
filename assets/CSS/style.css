@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5%;
+}
+
+.body{
+    font-size:1.6rem;
+    margin: 36px 135px 0px;
+    font-family: "Sora", sans-serif;
+}
+
+.main-content{
+    width: 1440px;
+}
