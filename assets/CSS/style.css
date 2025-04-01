@@ -62,6 +62,34 @@ a {
   padding-top: 18px;
 }
 
+.control {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.control__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #575f66;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.control__btn:hover {
+  background: #2e80ce;
+  border-color: #2e80ce;
+  color: #fff;
+}
+
+.control-icon--next {
+  rotate: 180deg;
+}
+
 /* ----------------header---------------- */
 .header {
   padding-top: 30px;
@@ -323,30 +351,174 @@ a {
   line-height: 1.75;
 }
 
-.work-item:hover{
-  border: 16px solid #2E80CE;
+.work-item:hover {
+  border: 16px solid #2e80ce;
   position: relative;
   bottom: 16px;
 }
 
-/* ----------------about---------------- */
+/* ------------about---------------- */
 
-.about{
-  padding: 170px 0;
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
+.about {
+  margin-top: 85px;
+  padding: 85px 0 206px;
 }
 
-.about-left{
+.about-row {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__media {
+  width: 49%;
+}
+
+.about-content {
+  width: 40%;
+}
+
+.about__img {
   position: relative;
 }
 
-.about-left__img--top{
+.about__img--big {
+  display: flex;
+  object-fit: cover;
+  width: 512px;
+  height: 370px;
+  border-radius: 6px;
+  box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.07);
+}
+
+.about__img--small {
   position: absolute;
   top: 121px;
   left: 238px;
+  object-fit: cover;
+  width: 332px;
+  height: 370px;
+  border-radius: 6px;
 }
 
+.about-content__btn {
+  margin-top: 38px;
+}
 
+/* ------------team---------------- */
+
+.team {
+  padding: 85px 0;
+}
+
+.team-header {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.team__btn {
+  margin-top: 38px;
+}
+
+.team__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 70px;
+  column-gap: 30px;
+}
+
+.member__img {
+  max-width: 100%;
+  height: 290px;
+  object-fit: cover;
+  /* xu ly phan thua do dau di xuong trong the inline */
+  display: block;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.member__img--bg {
+  border-radius: 6px;
+  background: #eaf6ff;
+  padding-top: 28px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.member:hover .member__img {
+  transform: scale(1.1);
+}
+
+.member__name {
+  color: #10375c;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
+  margin-top: 12px;
+}
+
+.member__desc {
+  color: #575f66;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.86; /* 185.714% */
+}
+
+.team__control {
+  margin-top: 38px;
+  justify-content: center;
+}
+
+/* ------------install---------------- */
+
+.install__inner {
+  margin: 180px 0 85px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+  align-items: center;
+  border-radius: 4px;
+  background: #2e80ce;
+}
+
+.install__img {
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+  width: 284px;
+  height: 522px;
+}
+
+.install__content {
+  padding: 75px 0;
+  min-width: 586px;
+}
+
+.install__heading {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  width: 489px;
+}
+
+.install-desc {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 200;
+  line-height: 1.67;
+  width: 586px;
+  margin-top: 18px;
+}
+
+.install__row {
+  margin-top: 38px;
+  display: flex;
+  column-gap: 28px;
+  align-items: center;
+}
