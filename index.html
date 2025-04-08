@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="./assets/CSS/reset.css">
     <!-- style css -->
     <link rel="stylesheet" href="./assets/CSS/style.css">
+    <link rel="stylesheet" href="./assets/CSS/responsive.css">
     <title>Dự án 3</title>
 </head>
 
@@ -42,7 +43,7 @@
             <!-- header-top -->
             <div class="header-top">
                 <!-- logo -->
-                <a href="./"><img src="./assets/img/logo.svg" alt="" class="logo"></a>
+                <a href="./"><img src="./assets/img/logo.svg" alt="" class="logo header__logo"></a>
                 <!-- nav -->
                 <nav class="navbar">
                     <ul class="navbar__list">
@@ -91,6 +92,21 @@
         </div>
     </header>
 
+    <!-- tablet mobile header -->
+    <div class="mobile-header">
+        <!-- tablet/ mobile menu -->
+        <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+        <label for="menu-checkbox">
+            <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="currentColor"
+                    d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+            </svg>
+        </label>
+
+        <!-- overlay -->
+        <label for="menu-checkbox" class="menu-overlay" ></label>
+    </div>
+
     <!-- main -->
 
     <main class="main">
@@ -103,7 +119,8 @@
                 <div class="service__row">
                     <!-- service left -->
                     <figure>
-                        <img src="./assets/img/service-img.svg" alt="Our services" class="service__img">
+                        <img src="./assets/img/service-img.svg" alt="Our services" class="service__img"
+                            data-aos="flip-up" data-aos-anchor=".service__btn">
                     </figure>
                     <!-- service right -->
                     <div class="service__list">
@@ -157,7 +174,7 @@
                                     fillings, and x-rays.</div>
                             </div>
                         </section>
-                        <a href="#!" class="btn service__btn">All Services</a>
+                        <a href="#!" class="btn service__btn" id="service__btn--id">All Services</a>
                     </div>
                 </div>
             </div>
@@ -227,7 +244,8 @@
         <section class="team">
             <div class="container">
                 <div class="team-header">
-                    <h2 class="section-heading team__heading">Our virtual dentist</h2>
+                    <h2 class="section-heading team__heading" data-aos="zoom-out-left" data-aos-duration="3000">Our
+                        virtual dentist</h2>
                     <a href="#!" class="btn team__btn">Meet our dentist</a>
                 </div>
                 <div class="team__list">
@@ -485,6 +503,11 @@
             </div>
         </div>
     </footer>
+    <!-- js animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
